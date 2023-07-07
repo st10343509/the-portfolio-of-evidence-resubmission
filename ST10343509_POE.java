@@ -120,7 +120,7 @@ public class ST10343509_POE {
                     
     
                     
-                    int Menu = 0;
+                    int Menu = 0
     while(Menu!=6)
     {
        MenuArrays mr = new MenuArrays ();

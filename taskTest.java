@@ -4,11 +4,6 @@
  */
 package com.mycompany.st10343509_poe;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -16,109 +11,37 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author thaba
  */
 public class taskTest {
+  public class TESTtask {
     
-    public taskTest() {
-    }
     
-    @BeforeAll
-    public static void setUpClass() {
-    }
+     Task instance = new Task();
     
-    @AfterAll
-    public static void tearDownClass() {
-    }
-    
-    @BeforeEach
-    public void setUp() {
+    public void testCheckTaskDescription(){
+     String tDescription = "This creates a login for authentication";
+     boolean result = instance.checkTaskDescription(tDescription);
+     assertEquals(true, result);
+        
+        
     }
     
-    @AfterEach
-    public void tearDown() {
+     public void testCreateTaskID(){
+         int Tnumber = 2;
+     String Tname = " Login Feauture";
+      String DeveloperDetails = "Robyn Harrison";
+      String expResult = "";
+     String result = instance.createTaskID(Tname,DeveloperDetails, Tnumber);
+     assertEquals(true, result);
+        
+        
     }
-
-    /**
-     * Test of createTaskID method, of class task.
-     */
-    @Test
-    public void testCreateTaskID_3args_1() {
-        System.out.println("createTaskID");
-        int i = 0;
-        String TaskName = "";
-        String string = "";
-        String expResult = "";
-        String result = task.createTaskID(i, TaskName, string);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of checkTaskDescription method, of class task.
-     */
-    @Test
-    public void testCheckTaskDescription() {
-        System.out.println("checkTaskDescription");
-        String Description = "";
-        task instance = new task();
-        boolean expResult = false;
-        boolean result = instance.checkTaskDescription(Description);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of createTaskID method, of class task.
-     */
-    @Test
-    public void testCreateTaskID_3args_2() {
-        System.out.println("createTaskID");
-        String Tname = "";
-        String DeveloperDetails = "";
-        int Tnumber = 0;
-        task instance = new task();
-        String expResult = "";
-        String result = instance.createTaskID(Tname, DeveloperDetails, Tnumber);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of printTaskDetails method, of class task.
-     */
-    @Test
-    public void testPrintTaskDetails() {
-        System.out.println("printTaskDetails");
-        String Tstatus = "";
-        String DeveloperDetails = "";
-        int Tnumber = 0;
-        String Tname = "";
-        String Description = "";
-        String TID = "";
-        int Duration = 0;
-        task instance = new task();
-        String expResult = "";
-        String result = instance.printTaskDetails(Tstatus, DeveloperDetails, Tnumber, Tname, Description, TID, Duration);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of returnTotalHours method, of class task.
-     */
-    @Test
-    public void testReturnTotalHours() {
-        System.out.println("returnTotalHours");
-        int Duration = 0;
-        int Totalhrs = 0;
-        task instance = new task();
-        int expResult = 0;
-        int result = instance.returnTotalHours(Duration, Totalhrs);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
+     
+     public void testReturnTotalHours(){
+         int Duration = 0;
+         int Hours = 0;
+         int expResult = 0;
+     int result = instance.returnTotalHours(Duration,Hours);
+     assertEquals(true, result);
+     }
+  }
 }
+        
